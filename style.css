@@ -1,0 +1,66 @@
+body {
+    background-color: #0d0d0d;
+    color: #00ff41;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.terminal-header {
+    border-bottom: 2px solid #00ff41;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+#stats-bar {
+    background: #1a1a1a;
+    padding: 10px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background: #141414;
+    border: 1px solid #333;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: #00ff41;
+    box-shadow: 0 0 10px #00ff4122;
+}
+
+.card-header {
+    background: #222;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.lvl-num { color: #ffb86c; }
+
+.card-body { padding: 15px; line-height: 1.6; }
+
+code {
+    background: #000;
+    color: #ff5555;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+.skill-tag {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 3px 10px;
+    background: #00ff41;
+    color: #000;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 15px;
+}
+
+a { color: #8be9fd; text-decoration: none; }
+a:hover { text-decoration: underline; }
