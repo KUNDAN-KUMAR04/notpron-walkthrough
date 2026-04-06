@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kundan | Notpron Progress</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="terminal-header">
+        <h1>> NOTPRON_LOG_FILES</h1>
+        <p>User: Kundan Kumar | Status: Level 8 Cleared</p>
+    </div>
+
+    <div id="stats-bar">
+        <span>TOTAL_COMPLETED: <b id="count">0</b></span>
+        <span>CURRENT_RANK: <b id="rank">Initiate</b></span>
+    </div>
+
+    <div class="container" id="level-list">
+        </div>
+
+    <script src="data.js"></script>
+    <script>
+        const container = document.getElementById('level-list');
+        document.getElementById('count').innerText = notpronData.length;
+
+        notpronData.sort((a, b) => b.level - a.level).forEach(item => {
+            const card = document.createElement('div');
+            card.className = 'card';
+            card.innerHTML = `
+                <div class="card-header">
+                    <span class="lvl-num">LVL ${item.level}</span>
+                    <span class="lvl-title">${item.title}</span>
+                </div>
+                <div class="card-body">
+                    <p><strong>DIRECT_URL:</strong> <a href="${item.url}" target="_blank">${item.url}</a></p>
+                    <p><strong>CREDENTIALS:</strong> <code>${item.credentials}</code></p>
+                    <p><strong>LOGIC:</strong> ${item.logic}</p>
+                    <div class="skill-tag">${item.skill}</div>
+                </div>
+            `;
+            container.appendChild(card);
+        });
+    </script>
+</body>
+</html>
